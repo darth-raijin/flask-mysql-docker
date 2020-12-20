@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+    backend:
+        build: ./backend
+        restart: on-failure
+        depends_on:
+            - database
+    database:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: pass
+        volumes:
+            - ./database:/docker-entrypoint-initdb.d/:ro
+ 
