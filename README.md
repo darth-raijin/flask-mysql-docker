@@ -21,3 +21,12 @@ To get into the MySQL container:
 ```
 $ docker exec -it <container_name> bash
 ```
+
+## How to modify
+
+### Database
+To connect in database.py, it is important to first set a name for the database in the init.sql file. The chosen name must also be used for the following variable in database.py:
+
+```python
+self.__db = "__change"
+```
