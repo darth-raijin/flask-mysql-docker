@@ -57,6 +57,6 @@ class Database:
             SELECT * FROM __table;
         """
         )
-        # Converts SQL resul to JSON
+        # Converts SQL result to JSON
         result = json.dumps(cursor.fetchall())
         return result
